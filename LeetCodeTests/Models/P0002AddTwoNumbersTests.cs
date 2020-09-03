@@ -12,17 +12,9 @@ namespace LeetCode.Models.Tests
         [TestMethod()]
         public void AddTwoNumbersTest()
         {
-            var l1 = new ListNode(2)
-            {
-                next = new ListNode(4)
-            };
-            l1.next.next = new ListNode(3);
+            var l1 = GetListNode(new int[] { 2, 4, 3 });
 
-            var l2 = new ListNode(5)
-            {
-                next = new ListNode(6)
-            };
-            l2.next.next = new ListNode(4);
+            var l2 = GetListNode(new int[] { 5, 6, 4 });
 
             var p2 = new P0002AddTwoNumbers();
 
@@ -43,8 +35,27 @@ namespace LeetCode.Models.Tests
                     break;
                 }
             }
-            CollectionAssert.AreEqual(expect,actual);
+            CollectionAssert.AreEqual(expect, actual);
 
+        }
+
+        private ListNode GetListNode(int[] arr)
+        {
+            var node = new ListNode();
+            var point = node;
+            var i = 0;
+            foreach (var item in arr)
+            {
+                point.val = item;
+                if (i < arr.Length-1)
+                {
+                    point.next = new ListNode();
+                    point = point.next;
+                }
+                i++;
+            }
+
+            return node;
         }
     }
 }
