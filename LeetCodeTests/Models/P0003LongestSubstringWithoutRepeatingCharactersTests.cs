@@ -17,7 +17,27 @@ namespace LeetCode.Models.Tests
             var test = new P0003LongestSubstringWithoutRepeatingCharacters();
             var actual = test.LengthOfLongestSubstring(input);
 
-            Assert.AreEqual(expect,actual);
+            Assert.AreEqual(expect, actual);
+        }
+        [TestMethod()]
+        public void LengthOfLongestSubstringTest_Give_bwf_Get_3()
+        {
+            var input = "bwf";
+            var expect = 3;
+            var test = new P0003LongestSubstringWithoutRepeatingCharacters();
+            var actual = test.LengthOfLongestSubstring(input);
+
+            Assert.AreEqual(expect, actual);
+        }
+        [TestMethod()]
+        public void LengthOfLongestSubstringTest_Give_anviaj_Get_5()
+        {
+            var input = "anviaj";
+            var expect = 5;
+            var test = new P0003LongestSubstringWithoutRepeatingCharacters();
+            var actual = test.LengthOfLongestSubstring(input);
+
+            Assert.AreEqual(expect, actual);
         }
         [TestMethod()]
         public void LengthOfLongestSubstringTest_Give_bbbbb_Get_1()
