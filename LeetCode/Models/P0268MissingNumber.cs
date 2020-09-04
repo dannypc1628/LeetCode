@@ -19,5 +19,21 @@ namespace LeetCode.Models
             }
             return i;
         }
+
+        public int MissingNumber2(int[] nums)
+        {
+            var max = nums.Max();
+            int total;
+            if (max < nums.Length)
+                total = (max+1 + 0) * (max+1 + 1) / 2;
+            else
+                total = (max + 0) * (max + 1) / 2;
+            foreach (var num in nums)
+            {
+                total -= num;
+            }
+
+            return total;
+        }
     }
 }

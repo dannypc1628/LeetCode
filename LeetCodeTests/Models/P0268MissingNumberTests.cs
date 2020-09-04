@@ -20,6 +20,16 @@ namespace LeetCode.Models.Tests
         }
 
         [TestMethod()]
+        public void Give_1_Get_0()
+        {
+            var nums = new[] { 1 };
+            var expect = 0;
+            var test = new P0268MissingNumber();
+            var actual = test.MissingNumber(nums);
+            Assert.AreEqual(expect, actual);
+        }
+
+        [TestMethod()]
         public void Give_964235701_Get_8()
         {
             var nums = new[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 };
