@@ -12,10 +12,8 @@ namespace LeetCode.Models
         {
             if (nums.Length > 0)
             {
-                var count = nums.Length;
-
                 var set = new HashSet<int>();
-                for (var i = 1; i <= count; i++)
+                for (var i = 1; i <= nums.Length; i++)
                 {
                     set.Add(i);
                 }
@@ -27,8 +25,7 @@ namespace LeetCode.Models
 
                 return set.ToList();
             }
-            var list = new List<int>();
-            return list;
+            return new List<int>();
         }
     }
 }
