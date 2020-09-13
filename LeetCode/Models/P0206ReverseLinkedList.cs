@@ -21,14 +21,15 @@ namespace LeetCode.Models
                 node = node.next;
             }
 
-            var ans = new ListNode(stack.Pop().val);
+            var ans = stack.Pop();
             var point = ans;
             while (stack.Count>0)
             {
-                point.next = new ListNode(stack.Pop().val);
+                point.next = stack.Pop();
                 point = point.next;
             }
 
+            point.next = null;
             return ans;
         }
     }
