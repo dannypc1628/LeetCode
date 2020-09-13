@@ -39,7 +39,7 @@ namespace LeetCode.Models.Tests
 
         }
 
-        private ListNode GetListNode(int[] arr)
+        public ListNode GetListNode(int[] arr)
         {
             var node = new ListNode();
             var point = node;
